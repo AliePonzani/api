@@ -1,5 +1,5 @@
 // This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// learn more about it in the docs https//pris.ly/d/prisma-schema
 
 generator client {
   provider = "prisma-client-js"
@@ -11,12 +11,23 @@ datasource db {
 }
 
 model User {
-  id         String    @id @default(uuid())
-  nome       String
-  email      String
-  senha   String
-  created_at DateTime? @default(now())
-  updated_at DateTime? @default(now())
+  id             String    @id @default(uuid())
+  nome           String
+  telefone       String
+  email          String
+  dataNac        DateTime
+  cep            String
+  cidade         String
+  bairro         String
+  logradouro     String
+  estado         String
+  numero         String
+  blocoTorre     String
+  apartamento    String
+  nomeCondominio String
+  senha          String
+  created_at     DateTime? @default(now())
+  updated_at     DateTime? @default(now())
 
   @@map("users")
 }
