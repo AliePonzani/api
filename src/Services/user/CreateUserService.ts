@@ -4,15 +4,15 @@ interface UserRequest {
     nome: string;
     telefone: string;
     email: string;
-    dataNac: Date;
+    dataNac: string;
     cep: string;
     cidade: string;
     bairro: string;
     logradouro: string;
     estado: string;
-    numero: string;
-    blocoTorre: string;
-    apartamento: string;
+    numero: number;
+    blocoTorre: number;
+    apartamento: number;
     nomeCondominio: string;
     senha: string;
 }

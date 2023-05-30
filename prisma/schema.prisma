@@ -15,15 +15,15 @@ model User {
   nome           String
   telefone       String
   email          String
-  dataNac        DateTime
+  dataNac        String
   cep            String
   cidade         String
   bairro         String
   logradouro     String
   estado         String
-  numero         String
-  blocoTorre     String
-  apartamento    String
+  numero         Int
+  blocoTorre     Int
+  apartamento    Int
   nomeCondominio String
   senha          String
   created_at     DateTime? @default(now())
