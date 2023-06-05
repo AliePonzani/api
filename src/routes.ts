@@ -4,7 +4,7 @@ import { CreateUserConstroller } from "./controllers/user/CreateUserController";
 
 const router = Router();
 
-router.post('/cadastroUsuario',new CreateUserConstroller().handle)
+router.post('/cadastroMorador',new CreateUserConstroller().handle)
 
 router.post('/login', new AuthUserController().handle);
 
