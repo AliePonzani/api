@@ -10,9 +10,9 @@ interface UserRequest {
     bairro: string;
     logradouro: string;
     estado: string;
-    numero: number;
-    blocoTorre: number;
-    apartamento: number;
+    numero: string;
+    blocoTorre: string;
+    apartamento: string;
     nomeCondominio: string;
     senha: string;
 }
@@ -39,15 +39,15 @@ class CreateUserServer {
                 email: email
             }
         });
-        
+
         if (!email) {
             throw new Error("Email é obrigatório!");
         }
-        
+
         if (userJaExiste) {
             throw new Error("Usuário já cadastrado!");
         }
-        
+
         const user = await prismaClient.user.create({
             data: {
                 nome: nome,
@@ -59,9 +59,9 @@ class CreateUserServer {
                 bairro: bairro,
                 logradouro: logradouro,
                 estado: estado,
-                numero: numero,
-                blocoTorre: blocoTorre,
-                apartamento: apartamento,
+                numero: numero, 
+                blocoTorre: blocoTorre, 
+                apartamento: apartamento, 
                 nomeCondominio: nomeCondominio,
                 senha: senha
             },
@@ -71,7 +71,7 @@ class CreateUserServer {
                 email: true
             }
         });
-        
+
         return user;
     }
 }

@@ -21,9 +21,9 @@ model User {
   bairro         String
   logradouro     String
   estado         String
-  numero         Int
-  blocoTorre     Int
-  apartamento    Int
+  numero         String
+  blocoTorre     String
+  apartamento    String
   nomeCondominio String
   senha          String
   created_at     DateTime? @default(now())
@@ -31,3 +31,25 @@ model User {
 
   @@map("users")
 }
+
+model UserVendedor {
+  id             String    @id @default(uuid())
+  nome           String
+  telefone       String
+  email          String
+  nomeLoja        String
+  cep            String
+  cidade         String
+  bairro         String
+  logradouro     String
+  estado         String
+  numero         String
+  complemento     String
+  senha          String
+  created_at     DateTime? @default(now())
+  updated_at     DateTime? @default(now())
+
+  @@map("usersVendedor")
+}
+
+
